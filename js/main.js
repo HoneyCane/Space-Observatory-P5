@@ -14,7 +14,7 @@ var w = 1080,
     h = 600;
 
 var camXrotate = 0, camYrotate = 0;
-var toleranceX = 250, toleranceY = 400;
+var toleranceX, toleranceY;
 var cameraSpeed = 0.005;
 
 function preload() {
@@ -43,6 +43,9 @@ function setup() {
     audio1.volume(0.3);
     audio2.volume(0.3);
     audio2.play();
+
+    toleranceX = height/3;
+    toleranceY = width/3;
 
     capture = createCapture({
         audio: false,
