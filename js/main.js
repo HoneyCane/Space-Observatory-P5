@@ -40,7 +40,9 @@ function setup() {
     audio2.onended( function play1() {
       audio1.play();
     });
-    audio1.play();
+    audio1.volume(0.3);
+    audio2.volume(0.3);
+    audio2.play();
 
     capture = createCapture({
         audio: false,
